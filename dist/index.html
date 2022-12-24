@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div id = "content">
+      <div id = "form">
+        <h1>Data Form</h1>
+        <form id = "validation-form" novalidate>
+          <label for="Email">Email:</label><br>
+          <input type="email" id="Email" name="Email" required><br>
+          <label for="Country">Country:</label><br>
+          <input type="text" id="Country" name="Country" minlength="2" required><br>
+          <label for="ZipCode">Zip Code:</label><br>
+          <input type="text" id="ZipCode" name="ZipCode" pattern="\d{5}" maxlength="5" minlength="5" required><br>
+          <label for="Password">Password:</label><br>
+          <input type="password" id="Password" name="Password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6.}" required><br>
+          <label for="PasswordC">Password Confirmation:</label><br>
+          <input type="password" id="PasswordC" name="PasswordC" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6.}" required><br>
+          <button type ="button" class = "submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+	<script src="main.js"></script>
+  </body>
+</html>
